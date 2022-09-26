@@ -3,6 +3,7 @@ import React from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
 import Svg, { Path } from "react-native-svg";
 import ButtonRegister from './components/ButtonRegister';
+import SkipButton from './components/SkipButton';
 
 export default function App() {
 
@@ -70,11 +71,12 @@ export default function App() {
         placeholder='Password'
         secureTextEntry={true}
       />
-      <Text style={styles.forgot} >Forgot your password?</Text>
+      <TouchableOpacity><Text style={styles.forgot} >Forgot your password?</Text></TouchableOpacity>
       <TouchableOpacity style={styles.button}>
         <Text style={styles.textButton}>LOGIN</Text>
       </TouchableOpacity>
       <ButtonRegister />
+      <SkipButton />
       <StatusBar style="auto" />
     </View>
   );
